@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+@keyframes breathe {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes scroll {
+	0% {
+		background-position: 0% 73%;
+	}
+	50% {
+		background-position: 100% 28%;
+	}
+	100% {
+		background-position: 0% 73%;
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes floating {
+	0% {
+		transform: translate(0, 0px);
+	}
+	50% {
+		transform: translate(0, -5px);
+	}
+	100% {
+		transform: translate(0, -0px);
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-wrapperbg {
+	position: fixed;
+	background-color: var(--bg);
+	width: 100%;
+	height: 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: .5rem 12rem;
 }
+
+.nav-wrapper h1,
+.nav-wrapperbg h1 {
+	color: var(--secondary);
+}
+
+.nav-wrapper ul,
+.nav-wrapperbg ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-wrapper li,
+.nav-wrapperbg li {
+	list-style: none;
+	margin: 0 1rem;
+}
+
+.nav-wrapper a,
+.nav-wrapperbg a {
+	text-decoration: none;
+	color: var(--secondary);
+	font-size: 1.2rem;
+}
+
+.centered {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.home-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	height: 100vh;
+	width: 100%;
+}
+
+.slidedown {
+	position: fixed;
+	bottom: 10px;
+	animation: breathe 3s infinite;
+	transition: all .5s ease;
+}
+
+.hidden {
+	display: none;
+}
+
+.home-about {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.rightside {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 50%;
+	height: 100vh;
+}
+
+.rightside h2 {
+	color: var(--secondary);
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.rightside p {
+	font-size: 1.2rem;
+	margin-top: 2rem;
+	line-height: 1.5;
+}
+
+.rightside h3 {
+	font-size: 1.1rem;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+.title {
+	font-size: 7rem;
+	margin: 0;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+}
+
+.title::after{
+	content: " Mauricio";
+	color: var(--secondary);
+}
+
+.firstcolor{
+	color: var(--white);
+}
+
+#homelink,
+#aboutlink,
+#projectlink {
+	transition: all .5s ease;
+}
+
+#homelink:hover,
+#aboutlink:hover,
+#projectlink:hover {
+	font-size: 22px;
+}
+
+.logo {
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	cursor: pointer;
+}
+
+.aboutmeBtn {
+	color: var(--secondary);
+	font-family: 'Aeonik', sans-serif;
+	font-weight: bold;
+}
+
+.aboutmeBtn:hover{
+	cursor: pointer;
+}
+
+/* GAME SECTION -- GAME SECTION -- GAME SECTION -- GAME SECTION -- GAME SECTION -- GAME SECTION -- */
+
+.game{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+/* GAME SECTION -- GAME SECTION -- GAME SECTION -- GAME SECTION -- GAME SECTION -- GAME SECTION -- */

@@ -1,10 +1,15 @@
+import { useState } from 'react';
+
 export default function Game() {
+
+	const [start, setStart] = useState(false);
+
 	return (
 		<div className="game">
-			<div className="firstscreen">
+			<div className={start ? "opacity0" : "firstscreen"}>
 				<h1>Do you want to play?</h1>
 				<div className="buttons">
-					<button>Sure, go ahead</button>
+					<button onClick={() => {setStart(true)}}>Sure, go ahead</button>
 				</div>
 			</div>
 		</div>
